@@ -8,8 +8,10 @@
 ![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
 ![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
 ![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
-![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge&logo=plotly&logoColor=white)
-![Seaborn](https://img.shields.io/badge/Seaborn-444876?style=for-the-badge&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge&logo=python&logoColor=white)
+![Seaborn](https://img.shields.io/badge/Seaborn-444876?style=for-the-badge)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white)
+![Plotly](https://img.shields.io/badge/Plotly-3F4F75?style=for-the-badge&logo=plotly&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
 <br/>
@@ -104,9 +106,10 @@ The dataset contains detailed information about **Movies and TV Shows** availabl
 |----------|-------|
 | **Language** | Python 3.x |
 | **Data Manipulation** | Pandas, NumPy |
-| **Data Visualization** | Matplotlib, Seaborn |
-| **Environment** | Jupyter Notebook |
-| **Analysis Type** | Exploratory Data Analysis, Business Intelligence |
+| **Data Visualization** | Plotly Express, Matplotlib, Seaborn |
+| **Dashboard / Web App** | Streamlit |
+| **Environment** | Jupyter Notebook, VS Code |
+| **Analysis Type** | Business Intelligence Dashboard, Exploratory Data Analysis |
 
 ---
 
@@ -115,8 +118,15 @@ The dataset contains detailed information about **Movies and TV Shows** availabl
 ```
 BUSINESS_CASE_STUDY_NETFLIX/
 │
-├── 📄 README.md                          # Project documentation
+├── 📁 data/
+│   └── 📊 netflix.csv                    # Dataset with 8,800+ titles
+├── 📁 images/                            # Visual plots exported from EDA
+├── 📄 app.py                             # Interactive Streamlit dashboard
+├── 📄 requirements.txt                   # Dependency definitions
+├── 📓 Netflix_EDA.ipynb                  # Exploratory Data Analysis notebook
+├── 🐍 Netflix_EDA.py                     # Python counterpart of the EDA notebook
 ├── 📑 BUSINESS_CASE_STUDY_NETFLIX.pdf    # Detailed analysis report with visualizations
+└── 📄 README.md                          # Project documentation
 ```
 
 > 📌 **Note:** The full analysis report — including all visualizations, code outputs, and business recommendations — is available in the [PDF report](BUSINESS_CASE_STUDY_NETFLIX.pdf).
@@ -169,27 +179,42 @@ BUSINESS_CASE_STUDY_NETFLIX/
 
 ## 🚀 Getting Started
 
-### Prerequisites
+### 🖥️ Running the Interactive Dashboard (Streamlit)
 
-Ensure you have Python 3.x installed along with the following libraries:
+To view the live interactive web dashboard:
 
-```bash
-pip install pandas numpy matplotlib seaborn jupyter
-```
+1. **Clone the repository and navigate inside**:
+   ```bash
+   git clone https://github.com/PritamPalit-official/BUSINESS_CASE_STUDY_NETFLIX.git
+   cd BUSINESS_CASE_STUDY_NETFLIX
+   ```
 
-### Run the Analysis
+2. **Install dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-```bash
-# Clone the repository
-git clone https://github.com/PritamPalit-official/BUSINESS_CASE_STUDY_NETFLIX.git
+3. **Run the Streamlit application**:
+   ```bash
+   streamlit run app.py
+   ```
 
-# Navigate to the project directory
-cd BUSINESS_CASE_STUDY_NETFLIX
+This will automatically launch the dashboard in your default browser at `http://localhost:8501`.
 
-# Open the PDF report
-# Or launch Jupyter Notebook for interactive exploration
-jupyter notebook
-```
+### 📓 Running the Notebook Analysis
+
+If you'd like to explore the step-by-step Jupyter Notebook analysis:
+
+1. **Install Jupyter and base requirements**:
+   ```bash
+   pip install pandas numpy matplotlib seaborn jupyter
+   ```
+
+2. **Launch Jupyter**:
+   ```bash
+   jupyter notebook
+   ```
+   Open `Netflix_EDA.ipynb` to see the complete exploration workflow.
 
 ### Quick Start (Python)
 
